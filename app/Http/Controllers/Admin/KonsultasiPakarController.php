@@ -114,6 +114,7 @@ public function __construct() {
             
             
         ]);
+        //        
 
         $id = $request->id_konsul;
         // dd($id);

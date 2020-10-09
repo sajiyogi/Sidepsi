@@ -36,6 +36,15 @@
         </li> 
     </li>
     @endrole
+              @role('pakar')
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="seen"> <i class="material-icons">notifications </i>
+          <span class="new badge red" id="notif_count"></span></a>  
+<ul class="dropdown-menu">
+      <div id="list"></div></ul>
+        </li> 
+    </li>
+    @endrole
+
     
                     <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
                     <!-- #END# Call Search -->

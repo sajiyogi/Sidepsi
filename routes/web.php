@@ -59,8 +59,13 @@ Route::group(['middleware' => 'role:admin','prefix'     => 'admin','namespace'  
     Route::post('/artikel/{artikel}/edit', 'ArtikelController@update')->name('artikel.update');
 
 });
+Route::group(['middleware' => 'role:pakar'] ,function(){
+   Route::get('/user/notifikasidua/','Admin\NotifikasiController@notifikasidua');
+     Route::get('/user/notifupdatedua/','Admin\NotifikasiController@updatedua');
+     }); 
 Route::group(['middleware' => 'role:pakar','prefix'     => 'admin','namespace'  => 'Admin',], function () {
-    Route::resource('gejala', 'GejalaController');
+      
+    // Route::resource('gejala', 'GejalaController');
     Route::get('admin/gejala/','GejalaController@index')->name('admin.gejala.index');  
     Route::post('/gejala/{gejala}/edit', 'GejalaController@update')->name('gejala.update');
     Route::get('admin/hasilsemuadeteksi/','DatadeteksiController@index')->name('gejala.hasilsemuadeteksi');

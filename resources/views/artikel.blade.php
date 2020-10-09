@@ -53,7 +53,7 @@ a, a:hover{
                         
             
                             
-                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/{{url('/beranda')}}">PELAYANAN</a></li>
+                                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/beranda')}}">PELAYANAN</a></li>
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/beranda')}}">GEJALA DEPRESI</a></li>
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{url('/beranda')}}">Profil Pakar</a></li>
                                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/artikel">ARTIKEL</a></li>

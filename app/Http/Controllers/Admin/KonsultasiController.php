@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Konsultasi;
+use App\Notifikasidua;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -56,7 +57,15 @@ public function __construct() {
      public function store(Request $request)
      {
        
-        
+       // dd($request);
+        Notifikasidua::create([
+            'deskripsi' => 'Pesan Masuk :'.$request->deskripsi,
+            'status_konsul' => 0,
+           
+            'user_id' => 2,
+            
+            
+        ]); 
         
                  Konsultasi::create([
             'perihal' =>  $request->perihal,

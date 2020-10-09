@@ -24,5 +24,3 @@ It is a full Laravel project that you should use as a starter project and implem
 # Special Thanks To:
 [AdminBSB - Material Design](https://gurayyarar.github.io/AdminBSBMaterialDesign/)
 # Sidepsi
-# Sidepsi
-# Sidepsi

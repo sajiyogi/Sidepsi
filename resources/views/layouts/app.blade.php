@@ -77,7 +77,51 @@
     });
     });
   </script> -->
+<script>
+    $(function notifi() {
+    $.ajax({
+    type  : 'GET',
+    url   : 'user/notifikasidua/',
+    success :function(response){
+      var isi = ''
+      var data = response.notifikasidua
+      var notif = response.total
+      
+      if(notif > 0){
+        console.log(notif)
+        $('#notif_count').html('<div>' + notif + '</div');
+        for(var i = 0; i < data.length; i++ ){
+            isi += `<ul class="dropdown-menu">
+            <li><a href="#">`+data[i].deskripsi+`</a></li>
+          </ul> `
+        }
+        $('#list').html(isi)
+      } else {
+        $('#notif_count div').remove();
+      }
+      if(notif == 0){
+        notif = 0
+        // console.log(notif)
+        $('#notif_count').html('<div>' + notif + '</div');
+        
+      } 
+    }
+    }).then(function(){
+    setTimeout(notifi, 3000)
+    
 
+      // for (i=0; i < data.length;i++){
+      //   if(data[i].is_read != 0){
+      //     newNotif++
+      //     isi +=  `<a href="#" class="dropdown-item">
+      //           <i class="material-icons">account_circle</i> `+ data[i].judul_notif + `
+      //         </a> `
+
+      //   }
+      // }
+    })
+  })
+  </script>
 </head>
 <body>
     <div id="app">
